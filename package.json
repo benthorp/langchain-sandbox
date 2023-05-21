@@ -27,8 +27,11 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "axios": "^1.4.0",
+    "cheerio": "^1.0.0-rc.12",
     "dotenv": "^16.0.3",
-    "langchain": "^0.0.39",
+    "hnswlib-node": "^1.4.2",
+    "langchain": "^0.0.75",
     "tsup": "^6.7.0"
   },
   "devDependencies": {

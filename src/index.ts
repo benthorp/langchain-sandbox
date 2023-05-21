@@ -1,15 +1,15 @@
 import * as dotenv from "dotenv";
-import { OpenAI } from "langchain";
+// import { RunExampleLLMChain } from "./SimpleLLMChain.ts";
+import { RetrievalQA } from "./RetrievalQA.ts";
+// import { RunGitHubRepoLoader } from "./GitHubLoader.js";
+// import { RunSampleChat } from './SampleChat.js'
 
-dotenv.config();
+async function main() {
+  dotenv.config();
 
-const model = new OpenAI({
-  modelName: "gpt-3.5-turbo",
-  openAIApiKey: process.env.OPENAI_API_KEY,
-});
+  const res = await RetrievalQA();
 
-const res = await model.call(
-  "What's a good idea for an application to build with GPT-3?"
-);
+  console.log(res);
+}
 
-console.log(res);
+main();
